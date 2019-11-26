@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background: linear-gradient(to top, white, rgba(109, 103, 137, .65) 0%), url(../img/bg-pers.jpg);
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+table{
+    border-spacing: 0;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a > i{
+    margin-right: .5em;
+}
+
+ul{
+    list-style: none;
+}
+
+.logo{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+h1{
+    font-size: 48px;
+}
+
+h4{
+    padding: 0.5em;
+    text-align: center;
+}
+
+.text-head1,.text-head4{
+    font-weight: 300;
+}
+
+.container{
+    min-width: 320px;
+    width: 80vw;
+    height: 90vh;
+    background: rgba(240,240,240, .7);
+    margin: 5vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1200px){
+    html{
+        min-width: 800px;
+        min-height: 600px;        
+    }
+
+    .container{
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .container > .main > .main-content > .part-main-saving-and-option > .wish-options{
+        padding: 0!important;
+    }
+}
+
+.container > header.header{
+    display: flex;
+    justify-content: space-between;
+    background:  rgba(109, 103, 137, .65);
+    border-bottom: 1px solid white;
+    height: 49px;
+    min-height: 49px;
+}
+
+.container > header.header > a{
+    padding: 0 1em;
+    min-width: calc(255.675px - 2em);
+    border-right: 1px solid white;
+}
+
+.container > header.header > nav.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.profile > img{
+    border-radius: 50%;
+    height: 40px;
+}
+
+nav.nav-right > a.nav-link{
+    margin-right: 1em;
+}
+
+.container > .main{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    height: calc(100% - 49px);
+}
+
+.container > .main > .sidebar{
+    display: flex;
+    background:  rgba(109, 103, 137, .65);
+    border-right: 1px solid white;
+    justify-content: flex-start;
+    flex: 0 1 calc(255.675px - 2em);
+    flex-direction: column;
+    padding: 0 1em;
+    min-width: calc(255.675px - 2em);
+}
+
+.container > .main > .main-content{
+    flex: 0 0 auto;
+}
+
+.container > .main > .sidebar > .sidebar-section{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.container > .main > .sidebar > .sidebar-section > a{
+    margin: .4em .7em;
+    padding: .2em;
+}
+
+.container > .main > .main-content{
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: flex-start;
+}
+
+.container > .main > .main-content > .chart{
+    flex: 1 1 35%;
+}
+
+.container > .main > .main-content > .table-data{
+    flex: 1 1 65%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.container > .main > .main-content > .table-data > .table{
+    flex: 1 1 calc(65% - 2em);
+    min-width: 450px;
+    padding: 0 1em 1em 1em;
+    overflow: auto;
+}
+
+/* .container > .main > .main-content > .table-data > .table*/::-webkit-scrollbar{ 
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.315);
+}
+
+/*.container > .main > .main-content > .table-data > .table*/::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.794);
+}
+
+.container > .main > .main-content > .table-data > .table > table > thead{
+    background-color: rgba(109, 103, 137, .65);
+    color: whitesmoke;
+}
+
+.container > .main > .main-content > .table-data > .table > table > thead > tr > th,
+.container > .main > .main-content > .table-data > .table > table > tbody > tr > td{
+    padding: .65em .4em;
+}
+
+.container > .main > .main-content > .table-data > .filter-settings{
+    flex: 1 1 calc(35% - 2em);
+    padding: 0 1em;
+}
+
+form>.form-element>input[type=text],
+form>.form-element>input[type=password],
+form>.form-element>input[type=email],
+form>.form-element>input[type=number],
+form>.form-element>input[type=date],
+form>.form-element>select{
+    border: none;
+    background: transparent;
+    /* border-bottom: 3px solid #bebebe; */
+    width: calc(100% - 1em);
+    outline: none;
+    box-shadow: 1px 1px 5px rgb(180, 180, 180);
+    font-weight: 300;
+    padding: .5em;
+}
+
+form>.form-element>select{
+    width: 100%;
+}
+
+form>.form-element{
+    text-align: center;
+    padding-top: .5em;
+    padding-top: .5em;
+}
+
+form>.form-element>input[type=text]:focus,
+form>.form-element>input[type=password]:focus,
+form>.form-element>input[type=email]:focus,
+form>.form-element>input[type=number]:focus,
+form>.form-element>input[type=date]:focus,
+form > .form-element > select:focus{
+    box-shadow: 1px 1px 10px rgb(160, 160, 160);
+}
+
+form>.form-element>input[type=submit]{
+    border: none;
+    color: white;
+    background-color: rgb(109,103,137);
+    padding: 1em;
+    cursor: pointer;
+}
+
+a.active-menu-option{
+    font-weight: 700;
+}
+
+#pagination{
+    display: flex!important;
+    justify-content: center;
+}
+
+.container > .main > .main-content > .part-main-saving-and-option{
+    flex: 1 1 30%;
+    min-height: 200px;
+    display: flex;
+}
+
+.container > .main > .main-content > .part-wishes{
+    flex: 1 1 calc(70% - 2em);
+    padding: 1em;
+}
+
+.container > .main > .main-content > .part-main-saving-and-option > .main-graphic{
+    flex: 1 1 calc(50% - 1em);
+    height: calc(100% - 1em);
+    padding: .5em;
+}
+
+.container > .main > .main-content > .part-main-saving-and-option > .wish-options{
+    flex: 1 1 calc(50% - 2em);
+    height: calc(100% - 2em);
+    padding: 1em;
+}
+
+.container > .main > .main-content > .part-main-saving-and-option > .wish-options > .section-wishes-buttons{
+    margin: 0 auto;
+    width: 200px;
+}
+
+.container > .main > .main-content > .part-main-saving-and-option > .wish-options > .section-wishes-buttons > form{
+    width: 100%;
+}
+
+.button{
+    padding: .7em 0!important;
+    margin: .25em 0;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(109,103,137);
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.container > .main > .main-content > .part-wishes {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.container > .main > .main-content > .part-wishes > .wish{
+    width: calc(350px - 1em);
+    height: calc(150px - 1em);
+    display: flex;
+    padding: .5em;
+    box-shadow: 1px 1px 5px rgb(170, 170, 170);
+    margin: .5em;
+}
+
+.container > .main > .main-content > .part-wishes > .wish > .graph{
+    flex: 1 1 calc(150px - 1em);
+}
+
+.container > .main > .main-content > .part-wishes > .wish > .description{
+    float: 1 1 auto;
+}
+
